@@ -28,6 +28,9 @@
                     <li><a href="#">Our Story</a></li>
                 </ul>
             </div>
+            <div id="menuIcon">
+                <i class="ri-menu-4-fill"></i>
+            </div>
             <div class="search">
                 <i class="ri-search-line"></i>
             </div>
@@ -55,18 +58,38 @@
                 </div>
                 <div id="right_content">
                     <div id="box">
-                        <h1>Description<i class="ri-add-line"></i></h1><h1>Nutrition <i class="ri-add-line"></i></h1>
+                        <h1>Description<i class="ri-add-line"></i></h1>
+                        <h1>Nutrition <i class="ri-add-line"></i></h1>
                         <h1>
                             Ingrediant
                         </h1>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iste odit ut voluptate iusto veniam 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iste odit ut voluptate
+                            iusto veniam
                         </p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <script>
+        const menuIcon = document.querySelector('#menuIcon i');
+        var menu = document.querySelector('.menu');
+        let flg = 0
+        menuIcon.addEventListener('click', () => {
+            if (flg === 0) {
+
+                menu.style.display = 'block';
+                flg = 1
+            }
+            else {
+                menu.style.display = 'none';
+                flg = 0
+
+            }
+        })
+        console.log(menuIcon, menu)
+    </script>
 </body>
 
 </html>
